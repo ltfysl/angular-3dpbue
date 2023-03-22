@@ -1,18 +1,18 @@
-enum ComplaintReasons {
+export enum ComplaintReasons {
   ReceivedLeaflet = '0',
   ReceivedFalseNoBan = '1',
   ReceivedTrueBanExisting = '2',
   AnotherProblem = '3',
 }
 
-const complaintReasonsNames = [
-  'empfangene Leaflet',
-  'empfangene falsenoban',
-  'empfangene trueban',
-  'anderes lo',
-];
+export class ComplaintReasonEnum {
+  complaintReasonsNames = [
+    'empfangene Leaflet',
+    'empfangene falsenoban',
+    'empfangene trueban',
+    'anderes lo',
+  ];
 
-class ComplaintReasonEnum {
   mapComplaintReasons() {
     const reasons = Object.keys(
       ComplaintReasons
@@ -20,7 +20,7 @@ class ComplaintReasonEnum {
 
     return reasons.map((key, value) => {
       return {
-        text: complaintReasonsNames[value],
+        text: this.complaintReasonsNames[value],
         value: value,
       };
     });

@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {
+  ComplaintReasonEnum,
+  ComplaintReasons,
+} from '../enums/ComplaintReasonEnum';
 
 @Component({
   selector: 'app-product-list',
@@ -7,7 +11,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   @Input() reasons;
-
   selectedReason: ComplaintReasons;
 
   constructor(private complaintReasonHandler: ComplaintReasonEnum) {}

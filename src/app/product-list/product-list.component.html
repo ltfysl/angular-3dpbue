@@ -3,6 +3,7 @@
 <div *ngFor="let reason of reasons" style="display: flex; align-items: center">
   <input
     type="radio"
+    [id]="reason.value"
     [name]="reason.value"
     [value]="reason.value"
     (change)="setSelectedReason(reason)"

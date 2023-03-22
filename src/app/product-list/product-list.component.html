@@ -1,0 +1,11 @@
+<h2 (click)="getAllComplaintReasons()">Products</h2>
+
+<div *ngFor="let reason of reasons" style="display: flex; align-items: center">
+  <input
+    type="radio"
+    [name]="reason.value"
+    [value]="reason.value"
+    (change)="setSelectedReason(reason)"
+  />
+  <label [for]="reason.value">{{ reason.text }}</label>
+</div>
